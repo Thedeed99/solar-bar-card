@@ -1,8 +1,8 @@
-// solar-bar-card.js
-// Enhanced Solar Bar Card with battery support and animated flow visualization
+// solar-bar-card-v2.js
+// Enhanced Solar Bar Card V2 with battery support and animated flow visualization
 // Version 3.1.0 - Infinite consumers with dynamic row layout
 
-import { COLOR_PALETTES, getCardColors, getPaletteOptions } from './solar-bar-card-palettes.js';
+import { COLOR_PALETTES, getCardColors, getPaletteOptions } from './solar-bar-card-v2-palettes.js';
 
 class SolarBarCard extends HTMLElement {
   constructor() {

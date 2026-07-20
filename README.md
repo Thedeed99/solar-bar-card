@@ -44,9 +44,9 @@ A real-time solar power distribution card for Home Assistant. Visualize how your
 
 ### Manual Installation
 
-1. Download `solar-bar-card.js` and `solar-bar-card-palettes.js` from [latest release](https://github.com/Thedeed99/solar-bar-card/releases)
+1. Download `solar-bar-card-v2.js` and `solar-bar-card-v2-palettes.js` from [latest release](https://github.com/Thedeed99/solar-bar-card/releases)
 2. Copy both files to `<config>/www/`
-3. Add resource: `resources: - url: /local/solar-bar-card.js  type: module`
+3. Add resource: `resources: - url: /local/solar-bar-card-v2.js  type: module`
 4. Restart Home Assistant
 
 **Note:** Both `.js` files are required for the color palette system.
