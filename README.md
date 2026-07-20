@@ -1,13 +1,13 @@
-# Solar Bar Card for Home Assistant
+# Solar Bar Card V2 for Home Assistant
 
 A real-time solar power distribution card for Home Assistant. Visualize how your solar energy flows between home consumption, grid export/import, battery storage, EV charging, and additional consumers — all in a single, intuitive bar chart.
 
+**This is a fork with infinite consumers support!**
+
 ![HACS Badge](https://img.shields.io/badge/HACS-Custom-orange.svg)
 ![Version](https://img.shields.io/badge/Version-3.1.0-blue.svg)
-[![GitHub Issues](https://img.shields.io/github/issues/0xAHA/solar-bar-card.svg)](https://github.com/0xAHA/solar-bar-card/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/0xAHA/solar-bar-card.svg?style=social)](https://github.com/0xAHA/solar-bar-card)
-
-<a href="https://www.buymeacoffee.com/0xAHA" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+[![GitHub Issues](https://img.shields.io/github/issues/Thedeed99/solar-bar-card.svg)](https://github.com/Thedeed99/solar-bar-card/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/Thedeed99/solar-bar-card.svg?style=social)](https://github.com/Thedeed99/solar-bar-card)
 
 ![solar-bar-card-1.gif](https://github.com/0xAHA/solar-bar-card/raw/main/solar-bar-card-1.gif)
 
@@ -38,15 +38,13 @@ A real-time solar power distribution card for Home Assistant. Visualize how your
 
 ### HACS (Recommended)
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=0xAHA&repository=solar-bar-card&category=dashboard)
-
 1. Open **HACS** > **Frontend** > **Custom repositories**
-2. Add `https://github.com/0xAHA/solar-bar-card` as **Lovelace**
+2. Add `https://github.com/Thedeed99/solar-bar-card` as **Lovelace**
 3. Click **Install** and restart Home Assistant
 
 ### Manual Installation
 
-1. Download `solar-bar-card.js` and `solar-bar-card-palettes.js` from [latest release](https://github.com/0xAHA/solar-bar-card/releases)
+1. Download `solar-bar-card.js` and `solar-bar-card-palettes.js` from [latest release](https://github.com/Thedeed99/solar-bar-card/releases)
 2. Copy both files to `<config>/www/`
 3. Add resource: `resources: - url: /local/solar-bar-card.js  type: module`
 4. Restart Home Assistant
@@ -58,7 +56,7 @@ A real-time solar power distribution card for Home Assistant. Visualize how your
 ## Quick Start
 
 ```yaml
-type: custom:solar-bar-card
+type: custom:solar-bar-card-v2
 inverter_size: 10
 production_entity: sensor.solar_production_power
 self_consumption_entity: sensor.home_consumption
@@ -123,7 +121,7 @@ show_legend: true
 **Infinite consumers example:**
 
 ```yaml
-type: custom:solar-bar-card
+type: custom:solar-bar-card-v2
 inverter_size: 10
 production_entity: sensor.solar_production_power
 self_consumption_entity: sensor.home_consumption
@@ -286,7 +284,7 @@ The grid icon changes dynamically: green when exporting, orange when importing. 
 ### Minimalist
 
 ```yaml
-type: custom:solar-bar-card
+type: custom:solar-bar-card-v2
 inverter_size: 10
 production_entity: sensor.solar_production_power
 self_consumption_entity: sensor.home_consumption
@@ -300,7 +298,7 @@ show_bar_values: false
 ### Full Featured
 
 ```yaml
-type: custom:solar-bar-card
+type: custom:solar-bar-card-v2
 inverter_size: 13.2
 production_entity: sensor.solar_production_power
 self_consumption_entity: sensor.home_consumption
@@ -342,7 +340,7 @@ tap_action_solar:
 ### Compact (Space Saver)
 
 ```yaml
-type: custom:solar-bar-card
+type: custom:solar-bar-card-v2
 inverter_size: 10
 production_entity: sensor.solar_production_power
 self_consumption_entity: sensor.home_consumption

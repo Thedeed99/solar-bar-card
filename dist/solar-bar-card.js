@@ -2659,7 +2659,7 @@ class SolarBarCard extends HTMLElement {
   }
 
   static getConfigElement() {
-    return document.createElement("solar-bar-card-editor");
+    return document.createElement("solar-bar-card-v2-editor");
   }
 
   static getStubConfig() {
@@ -3264,17 +3264,17 @@ class SolarBarCardEditor extends HTMLElement {
 }
 
 // Register the custom elements
-customElements.define('solar-bar-card', SolarBarCard);
-customElements.define('solar-bar-card-editor', SolarBarCardEditor);
+customElements.define('solar-bar-card-v2', SolarBarCard);
+customElements.define('solar-bar-card-v2-editor', SolarBarCardEditor);
 
 // Add to custom card registry
 window.customCards = window.customCards || [];
 window.customCards.push({
-  type: 'solar-bar-card',
-  name: 'Solar Bar Card',
-  description: 'A visual solar power distribution card with battery support, animated flow visualization, and customizable color palettes',
+  type: 'solar-bar-card-v2',
+  name: 'Solar Bar Card V2',
+  description: 'A visual solar power distribution card with battery support, animated flow visualization, infinite consumers, and customizable color palettes',
   preview: false,
-  documentationURL: 'https://github.com/0xAHA/solar-bar-card',
+  documentationURL: 'https://github.com/Thedeed99/solar-bar-card',
   getEntitySuggestion: (hass, entityId) => {
     if (entityId.split('.')[0] !== 'sensor') return null;
 
@@ -3292,7 +3292,7 @@ window.customCards.push({
 
     return {
       config: {
-        type: 'custom:solar-bar-card',
+        type: 'custom:solar-bar-card-v2',
         production_entity: entityId
       }
     };
@@ -3300,7 +3300,7 @@ window.customCards.push({
 });
 
 console.info(
-  '%c SOLAR-BAR-CARD %c v3.0.0 ',
+  '%c SOLAR-BAR-CARD-V2 %c v3.1.0 ',
   'color:#fff;background:#f57c00;font-weight:700;padding:2px 4px;border-radius:4px 0 0 4px;',
   'color:#f57c00;background:#fff3e0;font-weight:700;padding:2px 4px;border-radius:0 4px 4px 0;'
 );
