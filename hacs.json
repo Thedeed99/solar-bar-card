@@ -1,3 +1,5 @@
 {
-  "name": "Solar Bar Card V2"
+  "name": "Solar Bar Card V2",
+  "render_readme": true,
+  "filename": "dist/solar-bar-card.js"
 }
