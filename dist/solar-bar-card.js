@@ -1,6 +1,6 @@
 // solar-bar-card.js
 // Enhanced Solar Bar Card with battery support and animated flow visualization
-// Version 3.1.0 - Unlimited consumers with dynamic row layout
+// Version 3.1.0 - Infinite consumers with dynamic row layout
 
 import { COLOR_PALETTES, getCardColors, getPaletteOptions } from './solar-bar-card-palettes.js';
 
@@ -206,7 +206,7 @@ class SolarBarCard extends HTMLElement {
       consumer_2_name: null,
       consumer_3_entity: null,
       consumer_3_name: null,
-      // New: Array of consumers for unlimited consumer support
+      // New: Array of consumers for infinite consumer support
       // Format: [{ entity: 'sensor.x', name: 'Name', history_entity: 'sensor.x_daily' }, ...]
       consumers: [],
       // Max consumers per row in stats tiles (default 3)
@@ -2193,7 +2193,7 @@ class SolarBarCard extends HTMLElement {
             `);
           }
           
-          // Dynamic consumer tiles - supports unlimited consumers
+          // Dynamic consumer tiles - supports infinite consumers
           const consumersPerRow = this.config.consumers_per_row || 3;
           allConsumers.forEach((consumer) => {
             const power = this.getSensorValue(consumer.entity) || 0;

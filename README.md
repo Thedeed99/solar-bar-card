@@ -21,7 +21,7 @@ A real-time solar power distribution card for Home Assistant. Visualize how your
 - **Color-coded power bar** — solar (green), grid import (red), grid export (blue), EV charging (orange), with unused capacity and forecast overlay
 - **Battery integration** — adjacent battery bar with proportional sizing, animated charge/discharge flow lines, and SOC indicator
 - **Stats tiles** — dynamic tile layout that adapts to your setup (solar, import/export, usage, battery, EV, additional consumers) with auto-scaling fonts on narrow screens
-- **Unlimited consumers** — add as many power consumers as you need (heat pump, pool, hot water, AC, etc.) with automatic row wrapping (max 3 per row, configurable)
+- **Infinite consumers** — add as many power consumers as you need (heat pump, pool, hot water, AC, etc.) with automatic row wrapping (max 3 per row, configurable)
 - **Daily energy tracking** — connect daily kWh sensors for net import/export position with green/red indicator
 - **EV charger support** — automatic solar vs grid split, dedicated EV circle icon (solid fill: orange at >50% solar, green at >100%, charging glow when active), animated flow dots, potential capacity display
 - **Solar forecast** — Solcast auto-detection or custom forecast sensor with visual indicator
@@ -106,7 +106,7 @@ show_legend: true
 | `ev_icon_color` | color | `null` | Color of the car icon symbol inside the EV circle. Defaults to the theme's primary text color for idle/ready states, and white when charging (solid fill). Set this when the default doesn't contrast well against your circle color — e.g., `"black"` for light-colored EV palette themes. |
 | `car_charger_load` | number | `0` | EV charger capacity in kW. When set, shows a grey dashed bar segment for potential/unused charging capacity. |
 | `ev_history_entity` | string | `null` | Daily EV energy sensor (kWh). Shows daily total on the EV stats tile when stats detail is enabled. |
-| `consumers` | array | `[]` | **Unlimited consumers array.** Each consumer has `entity`, `name`, `history_entity`, and optional `icon`. Tiles are displayed in rows of max 3 (configurable). See example below. |
+| `consumers` | array | `[]` | **Infinite consumers array.** Each consumer has `entity`, `name`, `history_entity`, and optional `icon`. Tiles are displayed in rows of max 3 (configurable). See example below. |
 | `consumers_per_row` | number | `3` | Maximum number of consumer tiles per row. Extra consumers wrap to the next row. |
 | `consumer_1_entity` | string | `null` | *(Legacy)* Power sensor for an additional consumer. Prefer using the `consumers` array for new setups. |
 | `consumer_1_name` | string | `null` | *(Legacy)* Display name for Consumer 1. |
@@ -120,7 +120,7 @@ show_legend: true
 | `show_ev_when_idle` | boolean | `false` | Always show EV tile even when not charging. When off (default), tile only appears while actively charging. |
 | `show_consumers_when_idle` | boolean | `false` | When enabled, consumer tiles always show (even at 0 kW), like the battery tile. When disabled, consumer tiles only appear while the consumer is actively drawing power (> 0 kW). |
 
-**Unlimited consumers example:**
+**Infinite consumers example:**
 
 ```yaml
 type: custom:solar-bar-card
